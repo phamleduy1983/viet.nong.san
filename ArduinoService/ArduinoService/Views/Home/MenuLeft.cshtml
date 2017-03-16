@@ -1,0 +1,46 @@
+﻿@using ArduinoService.DataModels
+@using ArduinoService.Models
+@model IEnumerable<GardenRawData>
+
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="/Home/MainMenu" class="site_title">
+            <i class="fa fa-forumbee"></i> 
+            <span>IoT</span></a>
+        </div>
+        <div class="clearfix"></div>
+        <br />
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <ul class="nav side-menu" id="menu-left-garden">
+                    <li>
+                        <a href="/Profile/Profile"><i class="fa fa-user"></i> Trang cá nhân </a>
+                    </li>
+                    <li>
+                        <a href="/Home/MainMenu"><i class="fa fa-th-list"></i> Khu vườn </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><i class="fa fa-pagelines"></i> Thư viện cây trồng </a>
+                    </li>
+                    <li><a href="javascript:void(0)"><i class="fa fa-question-circle"></i> Tư vấn trực tuyến </a></li>
+
+                    @if (Session[ConstantClass.SESSION_USERNAME] != null)
+                    {
+                        if (Session[ConstantClass.SESSION_ROLE] != null && Session[ConstantClass.SESSION_ROLE].ToString() == "1")
+                        {
+                            <li>
+                                <a><i class="fa fa-wrench"></i> Admin Tools <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/AdminArea/AdminArea"><i class="fa fa-question-circle"></i> Manage Code </a></li>
+                                </ul>
+                            </li>
+                        }
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

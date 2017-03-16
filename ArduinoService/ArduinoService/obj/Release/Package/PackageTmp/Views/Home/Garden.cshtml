@@ -1,0 +1,49 @@
+﻿@using ArduinoService.Resource
+@using ArduinoService.DataModels
+@model IEnumerable<GardenRawData>
+
+@{
+    ViewBag.Title = "Control Systems ioT";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<div class="col-sm-12">
+    <section class="content-header">
+        <ol class="breadcrumb"></ol>
+    </section>
+</div>
+
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-6" isActive="@ViewBag.IsActive">
+            <div class="dashboard-div-wrapper" url="/Home/Control/@ViewBag.GardenId">
+                <i class="fa fa-wrench dashboard-div-icon"></i>
+                <h5>Hệ thống điều khiển</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" isActive="@ViewBag.IsActive">
+            <div class="dashboard-div-wrapper" url="/Home/Tracking/@ViewBag.GardenId">
+                <i class="fa fa-list-ol dashboard-div-icon"></i>
+                <h5>Hệ thống theo dõi</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" isActive="@ViewBag.IsActive">
+            <div class="dashboard-div-wrapper" url="/Home/Chart/@ViewBag.GardenId">
+                <i class="fa fa-line-chart dashboard-div-icon"></i>
+                <h5>Biểu đồ thống kê</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" isActive="@ViewBag.IsActive">
+            <div class="dashboard-div-wrapper" url="/Home/SettingGarden/@ViewBag.GardenId">
+                <i class="fa fa-cog dashboard-div-icon"></i>
+                <h5>Cài đặt</h5>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/View/Garden.js"></script>
+}
