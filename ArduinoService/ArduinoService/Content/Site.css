@@ -1,0 +1,494 @@
+﻿:root {
+    --background-color-iot: #79b03b;
+}
+
+body {
+    font-size: 12px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 65px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+a[href="http://somee.com"] {
+    display: none !important;
+}
+
+.alert {
+    padding: 10px !important;
+}
+
+.flat {
+    border-radius: 0px !important;
+}
+
+header {
+    min-height: 50px;
+}
+
+.box {
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    background: red;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .block-left {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1348px;
+    }
+}
+
+.dashboard-div-icon {
+    height: 75px;
+    width: 75px;
+    border: 2px solid #fff;
+    padding: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.box-garden {
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+    .box-garden img {
+        width: 100%;
+        height: 200px;
+    }
+
+#ModalEditGarden img, #ModalGarden img {
+    width: 100%;
+    height: 100%;
+}
+
+.form-control {
+    height: 27px;
+    padding: 0px 5px;
+}
+
+.statis {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dashboard-div-icon {
+    height: 75px;
+    width: 75px;
+    border: 2px solid #4B8609;
+    padding: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #4B8609;
+}
+
+.dashboard-div-wrapper {
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    color: #4B8609;
+    background-color: #fff;
+    min-height: 180px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    .dashboard-div-wrapper:hover {
+        cursor: pointer;
+    }
+
+.control-system .btn {
+    width: 100px !important;
+    height: 50px !important;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.status {
+    font-size: 15px;
+    padding: 10px;
+}
+
+#contain {
+    text-align: center;
+}
+
+.box-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+}
+
+.title-boxshadow {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D4CDCD;
+    margin-bottom: 10px;
+    width: 60%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.ctrl {
+    padding-bottom: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+
+.breadcrumb .fa {
+    margin-right: 5px;
+}
+
+#listgarden .x_panel {
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+}
+
+    #listgarden .x_panel:hover {
+        box-shadow: none;
+    }
+
+.icon-add {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 7px;
+    background: #4B8609;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 99;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    text-align: center;
+}
+
+    .icon-add:hover {
+        background: #26B99A;
+    }
+
+    .icon-add .fa {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+.icon-showpin {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    padding: 13px;
+    background: #4B8609;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 99;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    text-align: center;
+}
+
+    .icon-showpin:hover {
+        background: #26B99A;
+    }
+
+    .icon-showpin .fa {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px; /* Adjusts for spacing */
+    }
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal-footer .btn + .btn {
+    margin-bottom: 5px;
+}
+
+#txtdevicename {
+    float: left;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 230px;
+    font-size: 15px;
+    border: none;
+    background: #F7F7F7;
+    padding-left: 0px;
+}
+
+.box-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+
+#currenttracking {
+    height: 100px;
+    min-width: 270px !important;
+}
+
+#trackinghis {
+    margin-top: 10px;
+}
+
+.current-tracking {
+    height: 100px;
+    margin: 10px auto;
+    position: relative;
+}
+
+    .current-tracking span {
+        text-align: center;
+        line-height: 20px;
+        font-size: 30px;
+        color: gray;
+        margin-top: 35px;
+        width: 80%;
+        position: absolute;
+    }
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .current-tracking span {
+        font-size: 20px;
+    }
+}
+
+
+#unit-device {
+    width: 145px;
+    float: left;
+}
+
+.tracking-class .b-content {
+    width: 100%;
+}
+
+.table {
+    background: white;
+}
+
+.thead-inverse {
+    background: #437905;
+    color: white;
+}
+
+.modal-confirm .modal-dialog {
+    width: 275px;
+}
+
+.btn {
+    font-size: 12px;
+}
+
+#ModalConfirm .modal-dialog {
+    width: 300px;
+}
+
+#ModalConfirm .modal-body {
+    padding: 10px 15px;
+}
+
+#ModalConfirm .modal-header {
+    border-bottom: none;
+}
+
+#ModalConfirm .modal-footer {
+    border-top: none;
+}
+
+.icon-del {
+    color: #ffffff;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 6px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+    .icon-del:hover {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+#pinuno {
+    width: 100px;
+}
+
+.cbocontroltracking {
+    width: 70px;
+}
+
+#group-sensor2 {
+    margin-top: 5px;
+}
+
+.dropdown-usermenu li {
+    height: 40px;
+}
+
+    .dropdown-usermenu li a i {
+        margin-top: 0px;
+    }
+
+.sensorchart {
+    margin-top: 30px;
+}
+
+.details {
+    overflow-x: auto;
+}
+
+.input-img {
+    width: 125px;
+    height: 125px;
+    float: left;
+}
+
+.padding-0 {
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.acreage {
+    left: 10px;
+    position: relative;
+}
+
+label {
+    line-height: 27px;
+    float: left;
+}
+
+#acreage {
+    max-width: 100px;
+    float: left;
+}
+
+.fileinput-button {
+    float: left;
+}
+
+
+.star-important {
+    color: red;
+}
+
+#note-garden {
+    resize: none;
+}
+
+#ModalGarden .form-group {
+    min-height: 30px;
+}
+
+#group-image {
+    height: 120px;
+}
+
+#ModalLoading .modal-dialog {
+    width: 150px;
+}
+
+#ModalLoading .progress {
+    margin-bottom: 0px;
+}
+
+.form-control {
+    font-size: 13px !important;
+}
+
+.icon-setting:hover {
+    cursor: pointer;
+}
+
+.displaynone {
+    display: none;
+}
+
+
+/*Setting garden*/
+#settingshedule .panel-title {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#settingshedule .panel-heading {
+    padding: 2px 15px;
+}
+
+#settingshedule .btn {
+    padding: 4px 12px;
+}
+
+#settingshedule .table {
+    margin-bottom: 0px;
+}

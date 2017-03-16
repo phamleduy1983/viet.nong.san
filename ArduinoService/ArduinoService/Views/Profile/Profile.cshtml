@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+<link href="~/Content/Profile.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header id="header">
+                    <div class="cover">
+                    </div>
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"><img class="img-responsive" src="~/Content/Images/bg_no_image.gif"></a>
+                            <span class="site-name"><b>Admin</b></span>
+                            <span class="site-description">Administrator Manager</span>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="mainNav">
+                            <ul class="nav main-menu navbar-nav">
+                                <li><a href="#"><i class="fa fa-home"></i> Khu vườn</a></li>
+                            </ul>
+
+                            <ul class="nav  navbar-nav navbar-right">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+
+                </header><!--/#HEADER-->
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" id="body">
+                @{
+                    for (int i = 0; i < 20; i++)
+                    {
+                        <div class="col-md-4 portfolio-item">
+                            <a href="#">
+                                <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                            </a>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
