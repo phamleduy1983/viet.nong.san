@@ -31,7 +31,7 @@ namespace ArduinoService.Controllers
             bool result = false;
             try
             {
-                var data = _homemodel.AddOrEditGarden(model);
+                var data = _homemodel.AddOrEditGarden(model,true);
                 if (data != null)
                     result = true;
             }
@@ -48,7 +48,7 @@ namespace ArduinoService.Controllers
             bool result = false;
             try
             {
-                var data = _homemodel.AddOrEditGarden(model);
+                var data = _homemodel.AddOrEditGarden(model,true);
                 if (data != null)
                     result = true;
             }
