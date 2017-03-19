@@ -45,14 +45,15 @@ namespace ArduinoService.Models
             }
             return result;
         }
-        public GardenRawData AddOrEditGarden(GardenRawData data)
+        public GardenRawData AddOrEditGarden(GardenRawData data, bool? IsMobile = false)
         {
             try
             {
                 var _data = _dbContext.S_GARDEN.Where(x => x.TOKEN_KEY == data.TOKEN_KEY || x.GARDEN_ID == data.TOKEN_KEY).FirstOrDefault();
 
-                if (!commonFunction.IsNullOrEmpty(data.IMAGE)) {
-                    data.IMAGE = ConvertBase64ToImage(data.IMAGE);
+                if (IsMobile == true)
+                {
+                    data.IMAGE = Base64ToImage(data.IMAGE);
                 }
 
                 if (commonFunction.IsNullOrEmpty(data.TOKEN_KEY))
@@ -101,19 +102,64 @@ namespace ArduinoService.Models
             return data;
         }
 
+
+        public string Base64ToImage(string base64String)
+        {
+            string urlImage = string.Empty;
+            try
+            {
+                string convert = ReplaceStrBase64(base64String);
+                // Convert Base64 String to byte[]
+                byte[] imageBytes = Convert.FromBase64String(convert);
+                MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+
+                // Convert byte[] to Image
+                ms.Write(imageBytes, 0, imageBytes.Length);
+                Image image = Image.FromStream(ms, true);
+
+                string fullOutputPath = System.Web.HttpContext.Current.Server.MapPath("~/Content/Images/Upload/");
+                string datetimeNow = DateTime.Now.ToString("yyyyMMddhhmmss") + ".jpeg";
+
+                image.Save(fullOutputPath + datetimeNow);
+                urlImage = "Content/Images/Upload/" + datetimeNow;
+            }
+            catch (Exception ex)
+            {
+                urlImage = "Content/Images/Upload/bg_no_image.gif";
+            }
+            return urlImage;
+        }
+
         private string ConvertBase64ToImage(string base64String)
         {
-            byte[] bytes = Convert.FromBase64String(base64String);
-            string fullOutputPath = "/Content/UpLoad";
-
-            Image image;
-            using (MemoryStream ms = new MemoryStream(bytes))
+            string urlImg = String.Empty;
+            try
             {
-                image = Image.FromStream(ms);
-            }
+                string convert = ReplaceStrBase64(base64String);
+                byte[] bytes = Convert.FromBase64String(convert);
+                string fullOutputPath = System.Web.HttpContext.Current.Server.MapPath("~/Content/Images/Upload/");
 
-            image.Save(fullOutputPath, System.Drawing.Imaging.ImageFormat.Png);
-            return "";
+                string datetimeNow = DateTime.Now.ToString("yyyyMMddhhmmss");
+                urlImg = fullOutputPath + datetimeNow;
+
+                Image image;
+                using (MemoryStream ms = new MemoryStream(bytes))
+                {
+                    image = Image.FromStream(ms);
+                }
+                //image = new Bitmap(new MemoryStream(bytes));
+
+                image.Save(fullOutputPath + datetimeNow + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return urlImg;
+        }
+        private string ReplaceStrBase64(string base64)
+        {
+            return base64.Replace("data:image/jpeg;base64,", String.Empty).Replace("data:image/png;base64,", String.Empty).Replace("data:image/gif;base64,", String.Empty);
         }
 
         public GardenRawData GetGardenById(string tokenkey)
@@ -1409,15 +1455,30 @@ namespace ArduinoService.Models
             return lstResult;
         }
 
-        public List<ListValueTracking> GetListValueTrackingMobile(string tokenkey, string deviceid)
+        /// <summary>
+        /// Lay danh sach item dua vao id device
+        /// </summary>
+        /// <param name="tokenkey">Ma khu vuon</param>
+        /// <param name="deviceid">Ma thiet bi sensor</param>
+        /// <param name="datetime">Thoi gian</param>
+        /// <returns></returns>
+        public List<ListValueTracking> GetListValueTrackingMobile(string tokenkey, string deviceid, string dateinput)
         {
             List<ListValueTracking> lstItems = new List<ListValueTracking>();
             try
             {
+                string tablename = string.Empty;
+                if (dateinput == DateTime.Now.ToString("yyyy/MM/dd"))
+                    tablename = "D_DEVICE_SENSOR_DETAIL";
+                else
+                    tablename = "( SELECT * FROM " + Gettablename(deviceid) + " WHERE CONVERT(VARCHAR(10), TIME_UPDATE, 111) = @DateInput AND DEVICE_ID = '" + deviceid + @"' )";
+
+
                 string sql = @"
                     DECLARE @Date DATETIME
+                    DECLARE @DateInput DATETIME = '" + dateinput + @"' -- yyyy/mm/dd
                     --SELECT @Date = CONVERT(VARCHAR(10),GETDATE(),111)
-                    SELECT @Date = (SELECT CONVERT(VARCHAR(20),GETDATE() + 1,111) + ' 00:00')
+                    SELECT @Date = (SELECT CONVERT(VARCHAR(20),@DateInput + 1,111) + ' 00:00')
 
                     ;WITH Dates AS
                     (
@@ -1441,7 +1502,7 @@ namespace ArduinoService.Models
                     LEFT JOIN
                     (
 	                    SELECT D.VALUE,D.TIME_UPDATE,U.UNIT
-                        FROM D_DEVICE_SENSOR_DETAIL D
+                        FROM " + tablename + @" D
                         INNER JOIN
                         (
                         SELECT U.UNIT_NAME UNIT,D.DEVICE_ID FROM S_DEVICE D

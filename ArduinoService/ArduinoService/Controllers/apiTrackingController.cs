@@ -26,9 +26,9 @@ namespace ArduinoService.Controllers
         }
 
         // GET: api/apiTracking/tokenkey,id
-        public List<ListValueTracking> Get(string tokenkey, string id)
+        public List<ListValueTracking> Get(string tokenkey, string id, string dateinput)
         {
-            return _homemodel.GetListValueTrackingMobile(tokenkey, id);
+            return _homemodel.GetListValueTrackingMobile(tokenkey, id, dateinput);
         }
 
         // POST: api/apiTracking
