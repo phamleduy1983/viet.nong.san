@@ -1026,7 +1026,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	-ms-background-size:cover;
 }
 .w3l_banner_nav_right_banner5{
-	background:url(../images/17.jpg) no-repeat 0px 0px;
+	background:url(/Content/Images_Agri_Pro/17.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -1034,7 +1034,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	-ms-background-size:cover;
 }
 .w3l_banner_nav_right_banner6{
-	background:url(../images/21.jpg) no-repeat 0px 0px;
+	background:url(/Content/Images_Agri_Pro/21.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -1042,7 +1042,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	-ms-background-size:cover;
 }
 .w3l_banner_nav_right_banner7{
-	background:url(../images/25.jpg) no-repeat 0px 0px;
+	background:url(/Content/Images_Agri_Pro/25.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -1050,7 +1050,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	-ms-background-size:cover;
 }
 .w3l_banner_nav_right_banner8{
-	background:url(../images/26.jpg) no-repeat 0px 0px;
+	background:url(/Content/Images_Agri_Pro/28.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -1058,7 +1058,7 @@ ul.dropdown-menu.drp-mnu li a i {
 	-ms-background-size:cover;
 }
 .w3l_banner_nav_right_banner9{
-	background:url(../images/27.jpg) no-repeat 0px 0px;
+	background:url(/Content/Images_Agri_Pro/26.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -2234,8 +2234,8 @@ ul.wmuSliderPagination {
 .form-module .toggle {
   cursor: pointer;
   position: absolute;
-  top: -0;
-  right: -0;
+  top: 0;
+  right: 0;
   background:#FA1818;
   width: 30px;
   height: 30px;
@@ -2291,7 +2291,7 @@ ul.wmuSliderPagination {
   margin: 0 0 20px;
   padding: 10px 15px;
   box-sizing: border-box;
-  font-wieght: 400;
+  font-weight: 400;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-size:14px;

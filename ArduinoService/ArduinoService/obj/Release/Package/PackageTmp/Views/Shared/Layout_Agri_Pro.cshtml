@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vietnongsan - Nông sản sạch cho bạn</title>
     @*@Styles.Render("~/Content/css")*@
-	<link href="~/Content/Bootstrap_Agri_Pro.css" rel="stylesheet" />
 	
+    <link href="~/Content/Bootstrap_Agri_Pro.css" rel="stylesheet" />
 	<link href="~/Content/Style_Agri_Pro.css" rel="stylesheet" />
-	<link href="~/Content/Flexslider_Agri_Pro.css" rel="stylesheet" />
+	<link href="~/Content/Font-Awesome_Agri_Pro.css" rel="stylesheet" />
+    <link href="~/Content/Flexslider_Agri_Pro.css" rel="stylesheet" />
 
-	<link href="~/Content/font-awesome_Agri_Pro.css" rel="stylesheet" />
 	<link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' 			  		type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' 					rel='stylesheet' type='text/css'>
 	<script src="@Url.Content("~/Scripts/jquery-1.11.1.min.js")" type="text/javascript"></script>
@@ -35,6 +35,71 @@
 <body>
 	
     @RenderBody()
-	
+
+    <!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 w3_footer_grid">
+				<h3>thông tin</h3>
+				<ul class="w3_footer_grid_list">
+					<li><a href="events.html">Sự Kiện</a></li>
+					<li><a href="about.html">Tìm hiểu Việt Nông Sản</a></li>
+					<li><a href="services.html">Dịch vụ</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+				<h3>thông tin bảo mật</h3>
+				<ul class="w3_footer_grid_list">
+					<li><a href="faqs.html">hỏi đáp</a></li>
+					<li><a href="privacy.html">chính sách bảo mật</a></li>
+					<li><a href="privacy.html">điều kiện sử dụng</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+				<h3>sản phẩm</h3>
+				<ul class="w3_footer_grid_list">
+					    <li>@Html.ActionLink("Rau củ quả sạch", "Vegetable_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Sản phẩm Macca", "Macca_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Bột màu thực phẩm", "Material3D_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Sản phẩm gia cầm", "Chicken_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Dụng cụ rau câu", "Tool3D_Agri_Pro", "Home")</li>
+                        <li>@Html.ActionLink("Khu vườn thông minh", "Welcome_IOT", "Home")</li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+				<h3>facebook posts</h3>
+				<ul class="w3_footer_grid_list1">
+					<li><label class="fa fa-twitter" aria-hidden="true"></label><i>01 ngày trước</i><span>Chưa cập nhật</span></li>
+					<li><label class="fa fa-twitter" aria-hidden="true"></label><i>02 ngày trước</i><span>Chưa cập nhật.</span></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+			<!--div class="agile_footer_grids">
+				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
+					<div class="w3_footer_grid_bottom">
+						<h4>100% secure payments</h4>
+						<img src="images/card.png" alt=" " class="img-responsive" />
+					</div>
+				</div>
+				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
+					<div class="w3_footer_grid_bottom">
+						<h5>connect with us</h5>
+						<ul class="agileits_social_icons">
+							<li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#" class="dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div-->
+			<div class="wthree_footer_copy">
+				<p>© 2016 Việt Nông Sản. Bản quyền đã được bảo hộ và thiết kế bởi <a href="http://w3layouts.com/">W3layouts</a></p>
+			</div>
+		</div>
+	</div>
+    <!-- //footer -->
 </body>
 </html>

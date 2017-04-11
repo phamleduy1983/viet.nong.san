@@ -4,41 +4,9 @@
 }
 	<div class="agileits_header">
 		<div class="w3l_offers">
-			<span style="font-family:Arial, Helvetica, sans-serif;">Rất vui vì bạn đã ghé thăm</span>
+			<a>Chào mừng bạn đến Việt Nông Sản</a>
 		</div>
-		<!--div class="w3l_search">
-			<form action="#" method="post">
-				<input type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="">
-				<input type="submit" value=" ">
-			</form>
-		</div>
-		<div class="product_list_header">
-			<form action="#" method="post" class="last">
-                <fieldset>
-                    <input type="hidden" name="cmd" value="_cart" />
-                    <input type="hidden" name="display" value="1" />
-                    <input type="submit" name="submit" value="View your cart" class="button" />
-                </fieldset>
-            </form>
-		</div>
-		<div class="w3l_header_right">
-			<ul>
-				<li class="dropdown profile_details_drop">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
-					<div class="mega-dropdown-menu">
-						<div class="w3ls_vegetables">
-							<ul class="dropdown-menu drp-mnu">
-								<li><a href="login.html">Login</a></li> 
-								<li><a href="login.html">Sign Up</a></li>
-							</ul>
-						</div>                  
-					</div>	
-				</li>
-			</ul>
-		</div>
-		<div class="w3l_header_right1">
-			<h2><a href="mail.html">Contact Us</a></h2>
-		</div-->
+
 		<div class="clearfix"> </div>
 	</div>
 <!-- script-for sticky-nav -->
@@ -62,14 +30,6 @@
 			<div class="w3ls_logo_products_left">
 				<h1><a href="index.html"><span>Vì sức khỏe người Việt</span><p>vietnongsan.com</p></a></h1>
 			</div>
-			<!--div class="w3ls_logo_products_left1">
-				<ul class="special_items">
-					<li><a href="events.html">Events</a><i>/</i></li>
-					<li><a href="about.html">About Us</a><i>/</i></li>
-					<li><a href="products.html">Best Deals</a><i>/</i></li>
-					<li><a href="services.html">Services</a></li>
-				</ul>
-			</div-->
 			<div class="w3ls_logo_products_left1">
 				<ul class="phone_email">
 					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0972) 281182</li>
@@ -96,23 +56,13 @@
 			   <!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav nav_1">
-						<li><a href="products.html">Rau củ quả sạch</a></li>
-						<li><a href="household.html">Sản phẩm từ hạt Macca</a></li>
-						<!--li class="dropdown mega-dropdown active">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
-							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-								<div class="w3ls_vegetables">
-									<ul>	
-										<li><a href="vegetables.html">Vegetables</a></li>
-										<li><a href="vegetables.html">Fruits</a></li>
-									</ul>
-								</div>                  
-							</div>				
-						</li-->
-						<li><a href="kitchen.html">Bột màu rau câu tự nhiên</a></li>
-						<li><a href="short-codes.html">Thịt gà Đông Tảo</a></li>
-						<li><a href="pet.html">Dụng cụ rau câu 3D</a></li>
-						<li><a href="/Account/Login">Khu vườn thông minh</a></li>
+						<li>@Html.ActionLink("Trang chủ", "Welcome", "Home")</li>
+                        <li>@Html.ActionLink("Rau củ quả sạch", "Vegetable_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Sản phẩm Macca", "Macca_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Bột màu thực phẩm", "Material3D_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Sản phẩm gia cầm", "Chicken_Agri_Pro", "Home")</li>
+						<li>@Html.ActionLink("Dụng cụ rau câu", "Tool3D_Agri_Pro", "Home")</li>
+                        <li>@Html.ActionLink("Khu vườn thông minh", "Welcome_IOT", "Home")</li>
 					</ul>
 				 </div><!-- /.navbar-collapse -->
 			</nav>
@@ -125,7 +75,7 @@
 							<div class="w3l_banner_nav_right_banner">
 								<h3>Bảo đảm <span>100%</span> rau sạch.</h3>
 								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Mua ngay">Mua ngay</a>
+									<a href="/Home/Vegetable_Agri_Pro" class="button--saqui button--round-l button--text-thick" data-text="Xem ngay">Xem ngay</a>
 								</div>
 							</div>
 						</li>
@@ -133,7 +83,7 @@
 							<div class="w3l_banner_nav_right_banner1">
 								<h3>Cam kết <span>không sử dụng</span> hóa chất.</h3>
 								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Mua ngay">Mua ngay</a>
+									<a href="/Home/Material3D_Agri_Pro" class="button--saqui button--round-l button--text-thick" data-text="Mua ngay">Mua ngay</a>
 								</div>
 							</div>
 						</li>
@@ -141,7 +91,7 @@
 							<div class="w3l_banner_nav_right_banner2">
 								<h3>Mang lại <i>sức khỏe</i> cho bạn.</h3>
 								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Mua ngay">Mua ngay</a>
+									<a href="/Home/Macca_Agri_Pro" class="button--saqui button--round-l button--text-thick" data-text="Mua ngay">Mua ngay</a>
 								</div>
 							</div>
 						</li>
@@ -149,7 +99,7 @@
 				</div>
 			</section>
 			<!-- flexSlider -->
-				<link rel="stylesheet" href="~/Content/Flexslider_Agri_Pro.css" type="text/css" media="screen" property="" />
+				<link rel="stylesheet" href="~/Content/Flexslider_Agri_Pro.css" type="text/css" media="screen" />
 				<script defer src="~/Scripts/Flexslider_Agri_Pro.js"></script>	
 				<script type="text/javascript">
 				$(window).load(function(){
@@ -201,7 +151,7 @@
 <!-- top-brands -->
 	<div class="top-brands">
 		<div class="container">
-			<h3>Sản Phẩm Hiện Có</h3>
+			<h3>Sản Phẩm Nổi Bật</h3>
 			<div class="agile_top_brands_grids">
 				<div class="col-md-3 top_brand_left">
 					<div class="hover14 column">
@@ -213,9 +163,9 @@
 								<figure>
 									<div class="snipcart-item block" >
 										<div class="snipcart-thumb">
-											<a href="single.html"><img title=" " alt=" " src="~/Content/Images_Agri_Pro/1.png" /></a>		
-											<p>Hạt Macca Rang</p>
-											<h4>300,000 vnđ<span>320,000 vnđ</span></h4>
+											<a href="single.html"><img title=" " alt=" " src="~/Content/Images_Agri_Pro/tim_bo.jpg" class="img-responsive"/></a>		
+											<p>Cà chua tim bò</p>
+											<h4>30,000 vnđ<span>35,000 vnđ</span></h4>
 										</div>
 										<!--div class="snipcart-details top_brand_home_details">
 											<form action="#" method="post">
@@ -242,13 +192,16 @@
 				<div class="col-md-3 top_brand_left">
 					<div class="hover14 column">
 						<div class="agile_top_brand_left_grid">
+							<!--div class="agile_top_brand_left_grid_pos">
+								<img src="images/offer.png" alt=" " class="img-responsive" />
+							</div-->
 							<div class="agile_top_brand_left_grid1">
 								<figure>
-									<div class="snipcart-item block" >
+									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img title=" " alt=" " src="~/Content/Images_Agri_Pro/1.png" /></a>		
-											<p>Rau cải cầu vồng (0.5 Kg)</p>
-											<h4>30,000 vnđ<span>35,000 vnđ</span></h4>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/cai_cau_vong.jpg" alt=" " class="img-responsive" /></a>
+											<p>Cải cầu vồng (0.5 kg)</p>
+											<h4>30,000 vnđ <span>35,000 vnđ</span></h4>
 										</div>
 									</div>
 								</figure>
@@ -266,8 +219,8 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
-											<p>Cà chua đen (0.5 kg)</p>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/ca_chua_bi_2.jpg" alt=" " class="img-responsive" /></a>
+											<p>Cà chua bi (0.5 kg)</p>
 											<h4>30,000 vnđ <span>35,000 vnđ</span></h4>
 										</div>
 									</div>
@@ -283,7 +236,7 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/hat_danh_danh.jpg" alt=" " class="img-responsive" /></a>
 											<p>Bột màu dành dành (25 gr)</p>
 											<h4>50,000 vnđ</h4>
 										</div>
@@ -304,41 +257,7 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
-											<p>Bột màu củ dền (25 gr)</p>
-											<h4>50,000 vnđ</h4>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 top_brand_left">
-					<div class="hover14 column">
-						<div class="agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
-											<p>Bột màu thanh long (25 gr)</p>
-											<h4>50,000 vnđ</h4>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 top_brand_left">
-					<div class="hover14 column">
-						<div class="agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/la_cam_tim.jpg" alt=" " class="img-responsive" /></a>
 											<p>Bột màu lá cẩm (25 gr)</p>
 											<h4>50,000 vnđ</h4>
 										</div>
@@ -355,7 +274,41 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/thanh_long.jpg" alt=" " class="img-responsive" /></a>
+											<p>Bột màu thanh long (25 gr)</p>
+											<h4>50,000 vnđ</h4>
+										</div>
+									</div>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 top_brand_left">
+					<div class="hover14 column">
+						<div class="agile_top_brand_left_grid">
+							<div class="agile_top_brand_left_grid1">
+								<figure>
+									<div class="snipcart-item block">
+										<div class="snipcart-thumb">
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/tra_xanh.jpg" alt=" " class="img-responsive" /></a>
+											<p>Bột màu trà xanh (25 gr)</p>
+											<h4>50,000 vnđ</h4>
+										</div>
+									</div>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 top_brand_left">
+					<div class="hover14 column">
+						<div class="agile_top_brand_left_grid">
+							<div class="agile_top_brand_left_grid1">
+								<figure>
+									<div class="snipcart-item block">
+										<div class="snipcart-thumb">
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/dau_tam.jpg" alt=" " class="img-responsive" /></a>
 											<p>Bột màu dâu tằm (25 gr)</p>
 											<h4>50,000 vnđ</h4>
 										</div>
@@ -378,7 +331,7 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/quy_bo.jpg" alt=" " class="img-responsive" /></a>
 											<p>Bánh quy bơ Macca (0.5 kg)</p>
 											<h4>90,000 vnđ</h4>
 										</div>
@@ -395,9 +348,9 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
-											<p>Cà chua cherry (0.5 kg)</p>
-											<h4>30,000 vnđ <span>35,000 vnđ</span></h4>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/trung_ga.jpg" alt=" " class="img-responsive" /></a>
+											<p>Trứng gà ta (1 chục)</p>
+											<h4>32,000 vnđ <span>35,000 vnđ</span></h4>
 										</div>
 									</div>
 								</figure>
@@ -412,9 +365,9 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
-											<p>Gà đông tảo (1 kg)</p>
-											<h4>300,000 vnđ</h4>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/ga_tau_vang.jpg" alt=" " class="img-responsive" /></a>
+											<p>Gà ta đi bộ (1 kg)</p>
+											<h4>150,000 vnđ</h4>
 										</div>
 									</div>
 								</figure>
@@ -429,7 +382,7 @@
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="single.html"><img src="~/Content/Images_Agri_Pro/1.png" alt=" " class="img-responsive" /></a>
+											<a href="single.html"><img src="~/Content/Images_Agri_Pro/mang-tay.jpg" alt=" " class="img-responsive" /></a>
 											<p>Măng tây (0.5 kg)</p>
 											<h4>Hết hàng</h4>
 										</div>
@@ -517,86 +470,6 @@
 		</div>
 	</div-->
 <!-- //fresh-vegetables -->
-<!-- newsletter -->
-	<!--div class="newsletter">
-		<div class="container">
-			<div class="w3agile_newsletter_left">
-				<h3>sign up for our newsletter</h3>
-			</div>
-			<div class="w3agile_newsletter_right">
-				<form action="#" method="post">
-					<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-					<input type="submit" value="subscribe now">
-				</form>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div-->
-<!-- //newsletter -->
-<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="col-md-3 w3_footer_grid">
-				<h3>thông tin</h3>
-				<ul class="w3_footer_grid_list">
-					<li><a href="events.html">Sự Kiện</a></li>
-					<li><a href="about.html">Tìm hiểu Việt Nông Sản</a></li>
-					<li><a href="services.html">Dịch vụ</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 w3_footer_grid">
-				<h3>thông tin bảo mật</h3>
-				<ul class="w3_footer_grid_list">
-					<li><a href="faqs.html">hỏi đáp</a></li>
-					<li><a href="privacy.html">chính sách bảo mật</a></li>
-					<li><a href="privacy.html">điều kiện sử dụng</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 w3_footer_grid">
-				<h3>sản phẩm</h3>
-				<ul class="w3_footer_grid_list">
-					<li><a href="pet.html">Rau sạch</a></li>
-					<li><a href="frozen.html">Sản phẩm Macca</a></li>
-					<li><a href="kitchen.html">Kitchen</a></li>
-					<li><a href="products.html">Branded Foods</a></li>
-					<li><a href="household.html">Households</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 w3_footer_grid">
-				<h3>facebook posts</h3>
-				<ul class="w3_footer_grid_list1">
-					<li><label class="fa fa-twitter" aria-hidden="true"></label><i>01 ngày trước</i><span>Chưa cập nhật</span></li>
-					<li><label class="fa fa-twitter" aria-hidden="true"></label><i>02 ngày trước</i><span>Chưa cập nhật.</span></li>
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
-			<!--div class="agile_footer_grids">
-				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
-					<div class="w3_footer_grid_bottom">
-						<h4>100% secure payments</h4>
-						<img src="images/card.png" alt=" " class="img-responsive" />
-					</div>
-				</div>
-				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
-					<div class="w3_footer_grid_bottom">
-						<h5>connect with us</h5>
-						<ul class="agileits_social_icons">
-							<li><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div-->
-			<div class="wthree_footer_copy">
-				<p>© 2016 Việt Nông Sản. Bản quyền đã được bảo hộ và thiết kế bởi <a href="http://w3layouts.com/">W3layouts</a></p>
-			</div>
-		</div>
-	</div>
-<!-- //footer -->
 <!-- Bootstrap Core JavaScript -->
 <script defer src="~/Scripts/Bootstrap_Agri_Pro.min.js"></script>	
 <script>
